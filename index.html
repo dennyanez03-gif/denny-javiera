@@ -116,17 +116,12 @@ button{
 }
 </style>
 </head>
+
+<body>
+
 <audio id="bgmusic" loop>
   <source src="cityofstars.mp3" type="audio/mpeg">
 </audio>
-
-<script>
-function startPage(){
-  document.getElementById("intro").style.display="none";
-  document.getElementById("bgmusic").play();
-}
-</script>
-<body>
 
 <div class="stars"></div>
 
@@ -142,38 +137,10 @@ function startPage(){
 
 <h2>📸 Nuestros momentos</h2>
 <div class="slideshow">
-
 <img src="IMG-20260223-WA0052.jpg">
 <img src="IMG-20250615-WA0026.jpg">
 <img src="IMG-20260118-WA0057.jpg">
 <img src="motion_photo_4688936034215435824.jpg">
-<img src="IMG-20251130-WA0166(1).jpg">
-<img src="IMG-20251101-WA0080.jpg">
-<img src="IMG-20250901-WA0011.jpg">
-<img src="IMG-20250729-WA0038.jpg">
-<img src="IMG-20250721-WA0038.jpg">
-<img src="IMG-20250622-WA0276(1).jpg">
-<img src="IMG-20250524-WA0053.jpg">
-<img src="IMG-20250414-WA0034.jpg">
-<img src="IMG_20260220_100443.jpg">
-<img src="IMG-20250414-WA0003.jpg">
-<img src="IMG-20260118-WA0032.jpg">
-<img src="IMG-20251101-WA0014.jpg">
-<img src="IMG-20260102-WA0021.jpg">
-<img src="motion_photo_6044508062454653571.jpg">
-<img src="IMG-20260102-WA0025.jpg">
-<img src="IMG-20251130-WA0132.jpg">
-<img src="IMG-20251130-WA0138.jpg">
-<img src="IMG-20250622-WA0294(1).jpg">
-<img src="IMG-20250622-WA0307.jpg">
-<img src="IMG-20250402-WA0014(1).jpg">
-<img src="IMG-20250511-WA0001.jpg">
-<img src="IMG-20250414-WA0040.jpg">
-<img src="IMG-20250622-WA0195.jpg">
-<img src="IMG_20251207_150536.jpg">
-<img src="IMG_20250728_171904.jpg">
-<img src="IMG_20250622_102008.jpg">
-
 </div>
 
 <h2>💞 Nuestra Historia</h2>
@@ -209,13 +176,12 @@ function startPage(){
 20. sobre todo eso, que seas tu❤️<br>
 </div>
 
-
 <div class="game">
 <h2>💘 Encuentra el corazón correcto</h2>
 <span class="heart-btn" onclick="wrong()">💛</span>
 <span class="heart-btn" onclick="correct()">❤️</span>
 <span class="heart-btn" onclick="wrong()">🩵</span>
-  <span class="heart-btn" onclick="wrong()">🤍</span>
+<span class="heart-btn" onclick="wrong()">🤍</span>
 </div>
 
 <div id="scrollMessage">
@@ -226,7 +192,7 @@ Si volviera a nacer… te elegiría otra vez ❤️
 
 /* Intro */
 function startPage(){
-document.getElementById("intro").style.display="none";
+  document.getElementById("intro").style.display="none";
 }
 
 /* Contador */
@@ -266,10 +232,44 @@ scrollMsg.style.opacity=1;
 
 /* Juego */
 function correct(){
-alert("Correcto ❤️ Porque siempre te elegiría a ti mi princesa.");
+
+  const music = document.getElementById("bgmusic");
+  music.volume = 0;
+  music.play();
+
+  let fade = setInterval(()=>{
+    if(music.volume < 0.5){
+      music.volume += 0.05;
+    } else {
+      clearInterval(fade);
+    }
+  },200);
+
+  let overlay = document.createElement("div");
+  overlay.style.position="fixed";
+  overlay.style.top="0";
+  overlay.style.left="0";
+  overlay.style.width="100%";
+  overlay.style.height="100%";
+  overlay.style.background="black";
+  overlay.style.display="flex";
+  overlay.style.justifyContent="center";
+  overlay.style.alignItems="center";
+  overlay.style.flexDirection="column";
+  overlay.style.color="pink";
+  overlay.style.fontSize="28px";
+  overlay.style.zIndex="9999";
+  overlay.innerHTML="🌌 City of Stars… solo tú y yo ✨";
+
+  document.body.appendChild(overlay);
+
+  setTimeout(()=>{
+    overlay.innerHTML+="<br><br>Te elegiría en todas mis vidas ❤️";
+  },4000);
 }
+
 function wrong(){
-alert("Intenta otra vez 😏");
+  alert("Intenta otra vez 😏");
 }
 
 /* Corazones flotando */
@@ -284,17 +284,5 @@ setTimeout(()=>heart.remove(),6000);
 
 </script>
 
-<script>
-function startPage(){
-  document.getElementById("intro").style.display="none";
-  document.getElementById("bgmusic").play();
-}
-</script>
-  
-  <audio id="bgmusic" loop>
-  <source src="cityofstars.mp3" type="audio/mpeg">
-</audio>
-
-<script
 </body>
 </html>
