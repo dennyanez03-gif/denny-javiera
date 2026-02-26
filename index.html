@@ -3,59 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuestro Amor 💕</title>
+<title>Nuestro Amor Infinito 💕</title>
 
 <style>
-body {
-  margin: 0;
+body{
+  margin:0;
   font-family: Arial, sans-serif;
-  background: black;
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
+  background:black;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
 }
 
 /* Fondo estrellas */
-.stars {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  z-index: -1;
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  z-index:-2;
+}
+
+/* Corazones */
+.heart{
+  position:fixed;
+  bottom:-10px;
+  color:pink;
+  animation: floatUp 6s linear infinite;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-100vh);}
 }
 
 /* Slideshow */
-.slideshow {
-  max-width: 400px;
-  margin: 30px auto;
-  position: relative;
+.slideshow{
+  max-width:400px;
+  margin:30px auto;
+}
+.slideshow img{
+  width:100%;
+  border-radius:15px;
+  display:none;
+  transition:opacity 1s;
 }
 
-.slideshow img {
-  width: 100%;
-  border-radius: 15px;
-  display: none;
+/* Timeline */
+.timeline{
+  margin:40px auto;
+  max-width:500px;
+  text-align:left;
+}
+.timeline div{
+  margin:20px 0;
+  padding-left:10px;
+  border-left:2px solid pink;
 }
 
-.timeline {
-  margin: 40px 20px;
-  text-align: left;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+/* Carta */
+#letter{
+  margin:40px 20px;
+  font-size:18px;
+  min-height:100px;
 }
 
-.timeline div {
-  margin: 20px 0;
-  padding-left: 10px;
-  border-left: 2px solid pink;
+/* Botón */
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:pink;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.final-message {
-  margin: 60px 20px;
-  font-size: 22px;
-  color: pink;
-  font-weight: bold;
+/* Final */
+.final{
+  margin:60px 20px;
+  font-size:22px;
+  color:pink;
+  font-weight:bold;
 }
 </style>
 </head>
@@ -66,69 +94,96 @@ body {
 
 <h1>Javiera ❤️ Denny</h1>
 
-<h2>Nuestros momentos 💕</h2>
+<h2>⏳ Nuestro tiempo juntos</h2>
+<div id="counter"></div>
 
+<h2>📸 Nuestros momentos</h2>
 <div class="slideshow">
   <img src="IMG-20260223-WA0052.jpg">
   <img src="IMG-20250615-WA0026.jpg">
   <img src="IMG-20260118-WA0057.jpg">
-  <img src="motion_photo_4688936034215435824.jpg">
-  <img src="IMG-20251130-WA0166(1).jpg">
-  <img src="IMG-20251101-WA0080.jpg">
-  <img src="IMG-20250901-WA0011.jpg">
-  <img src="IMG-20250729-WA0038.jpg">
-  <img src="IMG-20250721-WA0038.jpg">
-  <img src="IMG-20250622-WA0276(1).jpg">
-  <img src="IMG-20250524-WA0053.jpg">
-  <img src="IMG-20250414-WA0034.jpg">
   <img src="IMG_20260220_100443.jpg">
-  <img src="IMG-20250414-WA0003.jpg">
-  <img src="IMG-20260118-WA0032.jpg">
-  <img src="IMG-20251101-WA0014.jpg">
   <img src="IMG-20260102-WA0021.jpg">
-  <img src="motion_photo_6044508062454653571.jpg">
-  <img src="IMG-20260102-WA0025.jpg">
-  <img src="IMG-20251130-WA0132.jpg">
-  <img src="IMG-20251130-WA0138.jpg">
-  <img src="IMG-20250622-WA0294(1).jpg">
-  <img src="IMG-20250622-WA0307.jpg">
-  <img src="IMG-20250402-WA0014(1).jpg">
-  <img src="IMG-20250511-WA0001.jpg">
-  <img src="IMG-20250414-WA0040.jpg">
-  <img src="IMG-20250622-WA0195.jpg">
-  <img src="IMG_20251207_150536.jpg">
-  <img src="IMG_20250728_171904.jpg">
-  <img src="IMG_20250622_102008.jpg">
 </div>
 
-<h2>Nuestra Historia 💞</h2>
-
+<h2>💞 Nuestra Historia</h2>
 <div class="timeline">
-  <div>✨ El día que nos conocimos — El inicio de todo</div>
-  <div>💋 Nuestro primer beso — El momento que cambió todo</div>
-  <div>🌙 Nuestra primera salida — Donde supe que eras diferente</div>
-  <div>❤️ El día que entendí que te amo</div>
-  <div>🔒 Y desde entonces… te elijo todos los días</div>
+  <div>✨ El día que nos conocimos en ese MC </div>
+  <div>💋 Nuestro primer beso en ese mirador el cual todo hizo clic</div>
+  <div>🌙 Nuestra primera salida en esa disco perriando y antes de eso en las luces chinas</div>
+  <div>❤️ El día que supe que eras tú </div>
+  <div>🔒 Y desde entonces… te elijo siempre</div>
 </div>
 
-<div class="final-message">
+<h2>💌 Para ti</h2>
+<div id="letter"></div>
+
+<br>
+<button onclick="secret()">No tocar 😏</button>
+
+<div class="final">
   Y esto recién comienza... 💍✨  
-  Quiero que seas mi para siempre.
+  Quiero que seas mia para siempre.
 </div>
 
 <script>
-let slideIndex = 0;
-let slides = document.querySelectorAll(".slideshow img");
 
-function showSlides() {
-  slides.forEach(slide => slide.style.display = "none");
+/* CONTADOR */
+let startDate = new Date("2025-03-14"); // CAMBIA ESTA FECHA
+function updateCounter(){
+  let now = new Date();
+  let diff = now - startDate;
+
+  let days = Math.floor(diff / (1000*60*60*24));
+  let hours = Math.floor((diff / (1000*60*60)) % 24);
+  let minutes = Math.floor((diff / (1000*60)) % 60);
+  let seconds = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("counter").innerHTML =
+    days+" días "+hours+" horas "+minutes+" minutos "+seconds+" segundos ❤️";
+}
+setInterval(updateCounter,1000);
+updateCounter();
+
+/* SLIDESHOW 3 SEGUNDOS */
+let slideIndex=0;
+let slides=document.querySelectorAll(".slideshow img");
+function showSlides(){
+  slides.forEach(s=>s.style.display="none");
   slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 500); // 0.5 segundos
+  if(slideIndex>slides.length){slideIndex=1}
+  slides[slideIndex-1].style.display="block";
+  setTimeout(showSlides,3000);
+}
+showSlides();
+
+/* CARTA MAQUINA */
+let text="Desde que llegaste a mi vida todo cambió. Me haces feliz incluso en mis días más difíciles. Eres mi paz, mi alegría y mi hogar. ❤️";
+let i=0;
+function typeWriter(){
+  if(i<text.length){
+    document.getElementById("letter").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typeWriter,50);
+  }
+}
+typeWriter();
+
+/* BOTÓN SECRETO */
+function secret(){
+  alert("Eres el amor de mi vida y quiero que seas para mi siempre ❤️");
 }
 
-showSlides();
+/* CORAZONES */
+setInterval(()=>{
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.style.left=Math.random()*100+"%";
+  heart.innerHTML="❤️";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},800);
+
 </script>
 
 </body>
