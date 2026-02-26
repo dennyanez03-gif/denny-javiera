@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Denny ❤️ Javiera</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffe6eb, #ffffff);
+  text-align:center;
+  overflow-x:hidden;
+}
+
+h1{
+  font-size:38px;
+  margin-top:40px;
+  color:#ff4d6d;
+}
+
+h2{
+  color:#ff4d6d;
+  margin-top:60px;
+}
+
+.mensaje{
+  font-size:22px;
+  margin:20px;
+}
+
+.contador{
+  font-size:20px;
+  margin-top:15px;
+  color:#333;
+}
+
+.galeria{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  padding:20px;
+}
+
+.galeria img{
+  width:250px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  transition:0.4s;
+}
+
+.galeria img:hover{
+  transform:scale(1.08);
+}
+
+.carta{
+  max-width:700px;
+  margin:40px auto;
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  font-size:18px;
+  line-height:1.6;
+}
+
+.corazon{
+  position:fixed;
+  color:red;
+  animation:flotar 6s linear infinite;
+}
+
+@keyframes flotar{
+  0%{transform:translateY(0); opacity:1;}
+  100%{transform:translateY(-800px); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Bienvenida al lugar donde vive nuestra historia ❤️</h1>
+
+<div class="mensaje">
+  Desde aquel día en el McDonald's de Maipú… todo cambió ✨
+</div>
+
+<div class="contador" id="contador"></div>
+
+<h2>Nuestro momento 💕</h2>
+
+<div class="galeria">
+  <img src="IMG-20260223-WA0052.jpg">
+  <img src="IMG-20250615-WA0026.jpg">
+  <img src="IMG-20260118-WA0057.jpg">
+  <img src="motion_photo_4688936034215435824.jpg">
+  <img src="IMG-20251130-WA0166(1).jpg">
+  <img src="IMG-20251101-WA0080.jpg">
+  <img src="IMG-20250901-WA0011.jpg">
+  <img src="IMG-20250729-WA0038.jpg">
+  <img src="IMG-20250721-WA0038.jpg">
+  <img src="IMG-20250622-WA0276(1).jpg">
+  <img src="IMG-20250524-WA0053.jpg">
+  <img src="IMG-20250414-WA0034.jpg">
+  <img src="IMG_20260220_100443.jpg">
+  <img src="IMG-20250414-WA0003.jpg">
+  <img src="IMG-20260118-WA0032.jpg">
+  <img src="IMG-20251101-WA0014.jpg">
+  <img src="IMG-20260102-WA0021.jpg">
+  <img src="motion_photo_6044508062454653571.jpg">
+  <img src="IMG-20260102-WA0025.jpg">
+  <img src="IMG-20251130-WA0132.jpg">
+  <img src="IMG-20251130-WA0138.jpg">
+  <img src="IMG-20250622-WA0294(1).jpg">
+  <img src="IMG-20250622-WA0307.jpg">
+  <img src="IMG-20250402-WA0014(1).jpg">
+  <img src="IMG-20250511-WA0001.jpg">
+  <img src="IMG-20250414-WA0040.jpg">
+  <img src="IMG-20250622-WA0195.jpg">
+  <img src="IMG_20251207_150536.jpg">
+  <img src="IMG_20250728_171904.jpg">
+  <img src="IMG_20250622_102008.jpg">
+</div>
+
+<h2>Para ti, Javiera 💌</h2>
+
+<div class="carta">
+  Javiera…<br><br>
+  Desde el 14 de marzo de 2025 mi vida cambió completamente.
+  Lo que empezó como algo simple en un McDonald's de Maipú,
+  terminó siendo el inicio de la historia más hermosa que he vivido.<br><br>
+  Gracias por cada risa, cada abrazo, cada momento.
+  Gracias por quedarte incluso cuando el mundo pesa.<br><br>
+  Si pudiera elegir de nuevo…
+  volvería a encontrarte mil veces más.<br><br>
+  Te amo ❤️
+</div>
+
+<script>
+const inicio = new Date("March 14, 2025 00:00:00").getTime();
+
+setInterval(function(){
+  const ahora = new Date().getTime();
+  const distancia = ahora - inicio;
+
+  const dias = Math.floor(distancia / (1000*60*60*24));
+  const horas = Math.floor((distancia % (1000*60*60*24)) / (1000*60*60));
+  const minutos = Math.floor((distancia % (1000*60*60)) / (1000*60));
+  const segundos = Math.floor((distancia % (1000*60)) / 1000);
+
+  document.getElementById("contador").innerHTML =
+  "Llevamos juntos: " + dias + " días " + horas + " horas "
+  + minutos + " minutos " + segundos + " segundos ❤️";
+},1000);
+
+function crearCorazon(){
+  const corazon = document.createElement("div");
+  corazon.classList.add("corazon");
+  corazon.innerHTML="❤️";
+  corazon.style.left = Math.random()*100+"vw";
+  corazon.style.bottom="0";
+  corazon.style.fontSize = (Math.random()*20+15)+"px";
+  document.body.appendChild(corazon);
+  setTimeout(()=>{corazon.remove();},6000);
+}
+
+setInterval(crearCorazon,500);
+</script>
+
+</body>
+</html>
