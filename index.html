@@ -1,96 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Denny ❤️ Javiera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestro Amor 💕</title>
 
 <style>
-body{
-  margin:0;
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #ffe6eb, #ffffff);
-  text-align:center;
-  overflow-x:hidden;
+  background: black;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
 }
 
-h1{
-  font-size:38px;
-  margin-top:40px;
-  color:#ff4d6d;
+/* Fondo estrellas */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  z-index: -1;
 }
 
-h2{
-  color:#ff4d6d;
-  margin-top:60px;
+/* Slideshow */
+.slideshow {
+  max-width: 400px;
+  margin: 30px auto;
+  position: relative;
 }
 
-.mensaje{
-  font-size:22px;
-  margin:20px;
+.slideshow img {
+  width: 100%;
+  border-radius: 15px;
+  display: none;
 }
 
-.contador{
-  font-size:20px;
-  margin-top:15px;
-  color:#333;
+.timeline {
+  margin: 40px 20px;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.galeria{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-  padding:20px;
+.timeline div {
+  margin: 20px 0;
+  padding-left: 10px;
+  border-left: 2px solid pink;
 }
 
-.galeria img{
-  width:250px;
-  border-radius:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
-  transition:0.4s;
-}
-
-.galeria img:hover{
-  transform:scale(1.08);
-}
-
-.carta{
-  max-width:700px;
-  margin:40px auto;
-  background:white;
-  padding:30px;
-  border-radius:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  font-size:18px;
-  line-height:1.6;
-}
-
-.corazon{
-  position:fixed;
-  color:red;
-  animation:flotar 6s linear infinite;
-}
-
-@keyframes flotar{
-  0%{transform:translateY(0); opacity:1;}
-  100%{transform:translateY(-800px); opacity:0;}
+.final-message {
+  margin: 60px 20px;
+  font-size: 22px;
+  color: pink;
+  font-weight: bold;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Bienvenida al lugar donde vive nuestra historia ❤️</h1>
+<div class="stars"></div>
 
-<div class="mensaje">
-  Desde aquel día en el McDonald's de Maipú… todo cambió ✨
-</div>
+<h1>Javiera ❤️ Denny</h1>
 
-<div class="contador" id="contador"></div>
+<h2>Nuestros momentos 💕</h2>
 
-<h2>Nuestro momento 💕</h2>
-
-<div class="galeria">
+<div class="slideshow">
   <img src="IMG-20260223-WA0052.jpg">
   <img src="IMG-20250615-WA0026.jpg">
   <img src="IMG-20260118-WA0057.jpg">
@@ -123,49 +101,34 @@ h2{
   <img src="IMG_20250622_102008.jpg">
 </div>
 
-<h2>Para ti, Javiera 💌</h2>
+<h2>Nuestra Historia 💞</h2>
 
-<div class="carta">
-  Javiera…<br><br>
-  Desde el 14 de marzo de 2025 mi vida cambió completamente.
-  Lo que empezó como algo simple en un McDonald's de Maipú,
-  terminó siendo el inicio de la historia más hermosa que he vivido.<br><br>
-  Gracias por cada risa, cada abrazo, cada momento.
-  Gracias por quedarte incluso cuando el mundo pesa.<br><br>
-  Si pudiera elegir de nuevo…
-  volvería a encontrarte mil veces más.<br><br>
-  Te amo ❤️
+<div class="timeline">
+  <div>✨ El día que nos conocimos — El inicio de todo</div>
+  <div>💋 Nuestro primer beso — El momento que cambió todo</div>
+  <div>🌙 Nuestra primera salida — Donde supe que eras diferente</div>
+  <div>❤️ El día que entendí que te amo</div>
+  <div>🔒 Y desde entonces… te elijo todos los días</div>
+</div>
+
+<div class="final-message">
+  Y esto recién comienza... 💍✨  
+  Quiero que seas mi para siempre.
 </div>
 
 <script>
-const inicio = new Date("March 14, 2025 00:00:00").getTime();
+let slideIndex = 0;
+let slides = document.querySelectorAll(".slideshow img");
 
-setInterval(function(){
-  const ahora = new Date().getTime();
-  const distancia = ahora - inicio;
-
-  const dias = Math.floor(distancia / (1000*60*60*24));
-  const horas = Math.floor((distancia % (1000*60*60*24)) / (1000*60*60));
-  const minutos = Math.floor((distancia % (1000*60*60)) / (1000*60));
-  const segundos = Math.floor((distancia % (1000*60)) / 1000);
-
-  document.getElementById("contador").innerHTML =
-  "Llevamos juntos: " + dias + " días " + horas + " horas "
-  + minutos + " minutos " + segundos + " segundos ❤️";
-},1000);
-
-function crearCorazon(){
-  const corazon = document.createElement("div");
-  corazon.classList.add("corazon");
-  corazon.innerHTML="❤️";
-  corazon.style.left = Math.random()*100+"vw";
-  corazon.style.bottom="0";
-  corazon.style.fontSize = (Math.random()*20+15)+"px";
-  document.body.appendChild(corazon);
-  setTimeout(()=>{corazon.remove();},6000);
+function showSlides() {
+  slides.forEach(slide => slide.style.display = "none");
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 500); // 0.5 segundos
 }
 
-setInterval(crearCorazon,500);
+showSlides();
 </script>
 
 </body>
