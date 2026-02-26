@@ -212,9 +212,10 @@ function startPage(){
 
 <div class="game">
 <h2>💘 Encuentra el corazón correcto</h2>
-<span class="heart-btn" onclick="wrong()">💔</span>
+<span class="heart-btn" onclick="wrong()">💛</span>
 <span class="heart-btn" onclick="correct()">❤️</span>
-<span class="heart-btn" onclick="wrong()">💔</span>
+<span class="heart-btn" onclick="wrong()">🩵</span>
+  <span class="heart-btn" onclick="wrong()">🤍</span>
 </div>
 
 <div id="scrollMessage">
@@ -265,7 +266,7 @@ scrollMsg.style.opacity=1;
 
 /* Juego */
 function correct(){
-alert("Correcto ❤️ Porque siempre te elegiría a ti.");
+alert("Correcto ❤️ Porque siempre te elegiría a ti mi princesa.");
 }
 function wrong(){
 alert("Intenta otra vez 😏");
@@ -282,9 +283,6 @@ setTimeout(()=>heart.remove(),6000);
 },800);
 
 </script>
-<audio id="bgmusic" loop>
-  <source src="cityofstars.mp3" type="audio/mpeg">
-</audio>
 
 <script>
 function startPage(){
@@ -292,5 +290,11 @@ function startPage(){
   document.getElementById("bgmusic").play();
 }
 </script>
+  
+  <audio id="bgmusic" loop>
+  <source src="cityofstars.mp3" type="audio/mpeg">
+</audio>
+
+<script
 </body>
 </html>
