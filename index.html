@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuestro Amor Infinito 💕</title>
+<title>Nuestro Universo 💕</title>
 
 <style>
 body{
@@ -15,7 +15,6 @@ body{
   overflow-x:hidden;
 }
 
-/* Fondo estrellas */
 .stars{
   position:fixed;
   width:100%;
@@ -24,16 +23,36 @@ body{
   z-index:-2;
 }
 
-/* Corazones */
-.heart{
+/* Pantalla inicio */
+#intro{
   position:fixed;
-  bottom:-10px;
-  color:pink;
-  animation: floatUp 6s linear infinite;
+  width:100%;
+  height:100%;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:10;
 }
-@keyframes floatUp{
-  0%{transform:translateY(0);}
-  100%{transform:translateY(-100vh);}
+
+#intro h1{
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:pink;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
 }
 
 /* Slideshow */
@@ -45,13 +64,12 @@ body{
   width:100%;
   border-radius:15px;
   display:none;
-  transition:opacity 1s;
 }
 
 /* Timeline */
 .timeline{
-  margin:40px auto;
   max-width:500px;
+  margin:40px auto;
   text-align:left;
 }
 .timeline div{
@@ -60,30 +78,41 @@ body{
   border-left:2px solid pink;
 }
 
-/* Carta */
-#letter{
-  margin:40px 20px;
-  font-size:18px;
-  min-height:100px;
+/* Lista */
+.love-list{
+  max-width:500px;
+  margin:30px auto;
+  text-align:left;
 }
 
-/* Botón */
-button{
-  padding:10px 20px;
-  border:none;
-  border-radius:20px;
-  background:pink;
-  color:black;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* Final */
-.final{
-  margin:60px 20px;
+/* Final scroll */
+#scrollMessage{
+  opacity:0;
+  transition:opacity 2s;
   font-size:22px;
   color:pink;
-  font-weight:bold;
+  margin:60px 20px;
+}
+
+/* Juego */
+.game{
+  margin:40px 0;
+}
+.heart-btn{
+  font-size:30px;
+  cursor:pointer;
+  margin:10px;
+}
+
+/* Corazones flotando */
+.heart{
+  position:fixed;
+  bottom:-10px;
+  animation: floatUp 6s linear infinite;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-100vh);}
 }
 </style>
 </head>
@@ -92,6 +121,11 @@ button{
 
 <div class="stars"></div>
 
+<div id="intro">
+  <h1>Esta página es solo para el amor de mi vida ❤️</h1>
+  <button onclick="startPage()">Entrar</button>
+</div>
+
 <h1>Javiera ❤️ Denny</h1>
 
 <h2>⏳ Nuestro tiempo juntos</h2>
@@ -99,90 +133,153 @@ button{
 
 <h2>📸 Nuestros momentos</h2>
 <div class="slideshow">
-  <img src="IMG-20260223-WA0052.jpg">
-  <img src="IMG-20250615-WA0026.jpg">
-  <img src="IMG-20260118-WA0057.jpg">
-  <img src="IMG_20260220_100443.jpg">
-  <img src="IMG-20260102-WA0021.jpg">
+
+<img src="IMG-20260223-WA0052.jpg">
+<img src="IMG-20250615-WA0026.jpg">
+<img src="IMG-20260118-WA0057.jpg">
+<img src="motion_photo_4688936034215435824.jpg">
+<img src="IMG-20251130-WA0166(1).jpg">
+<img src="IMG-20251101-WA0080.jpg">
+<img src="IMG-20250901-WA0011.jpg">
+<img src="IMG-20250729-WA0038.jpg">
+<img src="IMG-20250721-WA0038.jpg">
+<img src="IMG-20250622-WA0276(1).jpg">
+<img src="IMG-20250524-WA0053.jpg">
+<img src="IMG-20250414-WA0034.jpg">
+<img src="IMG_20260220_100443.jpg">
+<img src="IMG-20250414-WA0003.jpg">
+<img src="IMG-20260118-WA0032.jpg">
+<img src="IMG-20251101-WA0014.jpg">
+<img src="IMG-20260102-WA0021.jpg">
+<img src="motion_photo_6044508062454653571.jpg">
+<img src="IMG-20260102-WA0025.jpg">
+<img src="IMG-20251130-WA0132.jpg">
+<img src="IMG-20251130-WA0138.jpg">
+<img src="IMG-20250622-WA0294(1).jpg">
+<img src="IMG-20250622-WA0307.jpg">
+<img src="IMG-20250402-WA0014(1).jpg">
+<img src="IMG-20250511-WA0001.jpg">
+<img src="IMG-20250414-WA0040.jpg">
+<img src="IMG-20250622-WA0195.jpg">
+<img src="IMG_20251207_150536.jpg">
+<img src="IMG_20250728_171904.jpg">
+<img src="IMG_20250622_102008.jpg">
+
 </div>
 
 <h2>💞 Nuestra Historia</h2>
 <div class="timeline">
-  <div>✨ El día que nos conocimos en ese MC </div>
-  <div>💋 Nuestro primer beso en ese mirador el cual todo hizo clic</div>
-  <div>🌙 Nuestra primera salida en esa disco perriando y antes de eso en las luces chinas</div>
-  <div>❤️ El día que supe que eras tú </div>
-  <div>🔒 Y desde entonces… te elijo siempre</div>
+<div>✨ El día que nos conocimos</div>
+<div>💋 Nuestro primer beso</div>
+<div>🌙 Nuestra primera salida</div>
+<div>❤️ El día que supe que eras tú</div>
+<div>🔒 Desde entonces, te elijo siempre</div>
 </div>
 
-<h2>💌 Para ti</h2>
-<div id="letter"></div>
+<h2>💖 20 cosas que amo de ti</h2>
+<div class="love-list">
+1. Tu sonrisa<br>
+2. Tu mirada<br>
+3. Tu paciencia<br>
+4. Tus abrazos<br>
+5. Cómo me entiendes<br>
+6. Tu forma de amar<br>
+7. Tu voz<br>
+8. Tu dulzura<br>
+9. Tu fuerza<br>
+10. tu culito🍑
+11. tus ojos 👀
+12. tu risa
+13. tu forma de caminar
+14. tu cuerpo
+15. tu pelo
+16. tu humor
+17. tu vestimenta
+18. tu inteligencia 
+19. tus dientes
+20. sobre todo eso, que seas tu❤️
+</div>
 
-<br>
-<button onclick="secret()">No tocar 😏</button>
+<h2>📍 Donde comenzó todo</h2>
+<p>El lugar donde empezó nuestra historia ❤️</p>
+<iframe 
+width="90%" 
+height="250" 
+style="border:0;border-radius:15px;" 
+loading="lazy" 
+allowfullscreen 
+src="Av. Gladys Marín Millie 6991, M 6991, 9071425 Santiago, Pudahuel, Región Metropolitana&output=embed">
+</iframe>
 
-<div class="final">
-  Y esto recién comienza... 💍✨  
-  desde lo mas profundo de mi corazon
-          tu porotito
+<div class="game">
+<h2>💘 Encuentra el corazón correcto</h2>
+<span class="heart-btn" onclick="wrong()">💔</span>
+<span class="heart-btn" onclick="correct()">❤️</span>
+<span class="heart-btn" onclick="wrong()">💔</span>
+</div>
+
+<div id="scrollMessage">
+Si volviera a nacer… te elegiría otra vez ❤️
 </div>
 
 <script>
 
-/* CONTADOR */
-let startDate = new Date("2025-03-14"); // CAMBIA ESTA FECHA
+/* Intro */
+function startPage(){
+document.getElementById("intro").style.display="none";
+}
+
+/* Contador */
+let startDate = new Date("2024-05-10");
 function updateCounter(){
-  let now = new Date();
-  let diff = now - startDate;
-
-  let days = Math.floor(diff / (1000*60*60*24));
-  let hours = Math.floor((diff / (1000*60*60)) % 24);
-  let minutes = Math.floor((diff / (1000*60)) % 60);
-  let seconds = Math.floor((diff / 1000) % 60);
-
-  document.getElementById("counter").innerHTML =
-    days+" días "+hours+" horas "+minutes+" minutos "+seconds+" segundos ❤️";
+let now=new Date();
+let diff=now-startDate;
+let days=Math.floor(diff/(1000*60*60*24));
+let hours=Math.floor((diff/(1000*60*60))%24);
+let minutes=Math.floor((diff/(1000*60))%60);
+let seconds=Math.floor((diff/1000)%60);
+document.getElementById("counter").innerHTML=
+days+" días "+hours+" horas "+minutes+" minutos "+seconds+" segundos ❤️";
 }
 setInterval(updateCounter,1000);
 updateCounter();
 
-/* SLIDESHOW 3 SEGUNDOS */
+/* Slideshow */
 let slideIndex=0;
 let slides=document.querySelectorAll(".slideshow img");
 function showSlides(){
-  slides.forEach(s=>s.style.display="none");
-  slideIndex++;
-  if(slideIndex>slides.length){slideIndex=1}
-  slides[slideIndex-1].style.display="block";
-  setTimeout(showSlides,3000);
+slides.forEach(s=>s.style.display="none");
+slideIndex++;
+if(slideIndex>slides.length){slideIndex=1}
+slides[slideIndex-1].style.display="block";
+setTimeout(showSlides,3000);
 }
 showSlides();
 
-/* CARTA MAQUINA */
-let text="Desde que llegaste a mi vida todo cambió. Me haces feliz incluso en mis días más difíciles. Eres mi paz, mi alegría y mi hogar. ❤️";
-let i=0;
-function typeWriter(){
-  if(i<text.length){
-    document.getElementById("letter").innerHTML+=text.charAt(i);
-    i++;
-    setTimeout(typeWriter,50);
-  }
+/* Scroll mensaje */
+window.addEventListener("scroll",()=>{
+let scrollMsg=document.getElementById("scrollMessage");
+if(window.scrollY+window.innerHeight>=document.body.scrollHeight-50){
+scrollMsg.style.opacity=1;
 }
-typeWriter();
+});
 
-/* BOTÓN SECRETO */
-function secret(){
-  alert("Eres el amor de mi vida y quiero que seas para mi siempre ❤️");
+/* Juego */
+function correct(){
+alert("Correcto ❤️ Porque siempre te elegiría a ti.");
+}
+function wrong(){
+alert("Intenta otra vez 😏");
 }
 
-/* CORAZONES */
+/* Corazones flotando */
 setInterval(()=>{
-  let heart=document.createElement("div");
-  heart.className="heart";
-  heart.style.left=Math.random()*100+"%";
-  heart.innerHTML="❤️";
-  document.body.appendChild(heart);
-  setTimeout(()=>heart.remove(),6000);
+let heart=document.createElement("div");
+heart.className="heart";
+heart.style.left=Math.random()*100+"%";
+heart.innerHTML="❤️";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
 },800);
 
 </script>
