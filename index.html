@@ -229,7 +229,7 @@ document.getElementById("intro").style.display="none";
 }
 
 /* Contador */
-let startDate = new Date("2024-05-10");
+let startDate = new Date("2025-03-14");
 function updateCounter(){
 let now=new Date();
 let diff=now-startDate;
@@ -282,6 +282,15 @@ setTimeout(()=>heart.remove(),6000);
 },800);
 
 </script>
+<audio id="bgmusic" loop>
+  <source src="cityofstars.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+function startPage(){
+  document.getElementById("intro").style.display="none";
+  document.getElementById("bgmusic").play();
+}
+</script>
 </body>
 </html>
