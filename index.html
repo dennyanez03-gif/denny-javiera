@@ -3,313 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Mi Universo 💕</title>
+<title>Nuestro Universo ❤️</title>
 
 <style>
+
 body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:black;
-  color:white;
-  text-align:center;
-  overflow-x:hidden;
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+text-align:center;
+overflow-x:hidden;
 }
 
+/* estrellas */
 .stars{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  z-index:-2;
+position:fixed;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+z-index:-1;
 }
 
-/* Pantalla inicio */
+/* intro */
 #intro{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:black;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  z-index:10;
-}
-
-#intro h1{
-  animation: fadeIn 3s;
-}
-
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:10;
 }
 
 button{
-  padding:10px 20px;
-  border:none;
-  border-radius:20px;
-  background:pink;
-  color:black;
-  font-weight:bold;
-  cursor:pointer;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:pink;
+font-weight:bold;
+cursor:pointer;
 }
 
-/* Slideshow */
+/* slideshow */
+
 .slideshow{
-  max-width:400px;
-  margin:30px auto;
+max-width:420px;
+margin:30px auto;
 }
+
 .slideshow img{
-  width:100%;
-  border-radius:15px;
-  display:none;
+width:100%;
+border-radius:15px;
+display:none;
 }
 
-/* Timeline */
+/* timeline */
+
 .timeline{
-  max-width:500px;
-  margin:40px auto;
-  text-align:left;
+max-width:500px;
+margin:auto;
+text-align:left;
 }
+
 .timeline div{
-  margin:20px 0;
-  padding-left:10px;
-  border-left:2px solid pink;
+margin:15px 0;
+border-left:3px solid pink;
+padding-left:10px;
 }
 
-/* Lista */
+/* lista */
+
 .love-list{
-  max-width:500px;
-  margin:30px auto;
-  text-align:left;
+max-width:500px;
+margin:auto;
+text-align:left;
 }
 
-/* Final scroll */
-#scrollMessage{
-  opacity:0;
-  transition:opacity 2s;
-  font-size:22px;
-  color:pink;
-  margin:60px 20px;
-}
+/* juego */
 
-/* Juego */
-.game{
-  margin:40px 0;
-}
 .heart-btn{
-  font-size:30px;
-  cursor:pointer;
-  margin:10px;
+font-size:32px;
+cursor:pointer;
+margin:10px;
 }
 
-/* Corazones flotando */
+/* corazones */
+
 .heart{
-  position:fixed;
-  bottom:-10px;
-  animation: floatUp 6s linear infinite;
+position:fixed;
+bottom:-10px;
+animation:floatUp 6s linear infinite;
 }
+
 @keyframes floatUp{
-  0%{transform:translateY(0);}
-  100%{transform:translateY(-100vh);}
+0%{transform:translateY(0);}
+100%{transform:translateY(-100vh);}
 }
+
+/* estrellas fugaces */
+
+.shooting-star{
+position:fixed;
+width:2px;
+height:100px;
+background:white;
+top:-100px;
+animation:shoot 3s linear;
+}
+
+@keyframes shoot{
+0%{transform:translateX(0) translateY(0);}
+100%{transform:translateX(500px) translateY(800px);}
+}
+
+/* mensaje final */
+
+#finalMessage{
+opacity:0;
+transition:2s;
+font-size:24px;
+color:pink;
+margin:60px;
+}
+
 </style>
 </head>
 
 <body>
 
-<audio id="bgmusic" loop>
-  <source src="cityofstars.mp3" type="audio/mpeg">
+<audio id="music" loop>
+<source src="cityofstars.mp3" type="audio/mpeg">
 </audio>
 
 <div class="stars"></div>
 
 <div id="intro">
-  <h1>Esta página es solo para el amor de mi vida ❤️</h1>
-  <button onclick="startPage()">Entrar</button>
+<h1>Esta página es solo para el amor de mi vida ❤️</h1>
+<button onclick="start()">Entrar</button>
 </div>
 
-<h1>VERSION NUEVA FUNCIONANDO 🔥</h1>
+<h1>Javiera ❤️ Denni</h1>
 
 <h2>⏳ Nuestro tiempo juntos</h2>
 <div id="counter"></div>
 
-<h2>📸 Nuestros momentos</h2>
+<h2>📸 Nuestros recuerdos</h2>
+
 <div class="slideshow">
+
 <img src="IMG-20260223-WA0052.jpg">
 <img src="IMG-20250615-WA0026.jpg">
 <img src="IMG-20260118-WA0057.jpg">
 <img src="motion_photo_4688936034215435824.jpg">
 <img src="IMG-20251130-WA0166(1).jpg">
 <img src="IMG-20251101-WA0080.jpg">
-<img src="IMG-20250901-WA0011.jpg">
-<img src="IMG-20250729-WA0038.jpg">
-<img src="IMG-20250721-WA0038.jpg">
-<img src="IMG-20250622-WA0276(1).jpg">
-<img src="IMG-20250524-WA0053.jpg">
-<img src="IMG-20250414-WA0034.jpg">
-<img src="IMG_20260220_100443.jpg">
-<img src="IMG-20250414-WA0003.jpg">
-<img src="IMG-20260118-WA0032.jpg">
-<img src="IMG-20251101-WA0014.jpg">
-<img src="IMG-20260102-WA0021.jpg">
-<img src="motion_photo_6044508062454653571.jpg">
-<img src="IMG-20260102-WA0025.jpg">
-<img src="IMG-20251130-WA0132.jpg">
-<img src="IMG-20251130-WA0138.jpg">
-<img src="IMG-20250622-WA0294(1).jpg">
-<img src="IMG-20250622-WA0307.jpg">
-<img src="IMG-20250402-WA0014(1).jpg">
-<img src="IMG-20250511-WA0001.jpg">
-<img src="IMG-20250414-WA0040.jpg">
-<img src="IMG-20250622-WA0195.jpg">
-<img src="IMG_20251207_150536.jpg">
-<img src="IMG_20250728_171904.jpg">
-<img src="IMG_20250622_102008.jpg">
 
 </div>
 
 <h2>💞 Nuestra Historia</h2>
+
 <div class="timeline">
-<div>✨ El día que nos conocimos</div>
+
+<div>✨ Nos conocimos en un McDonald's de Maipú</div>
 <div>💋 Nuestro primer beso</div>
 <div>🌙 Nuestra primera salida</div>
 <div>❤️ El día que supe que eras tú</div>
-<div>🔒 Desde entonces, te elijo siempre</div>
+<div>🔒 Desde entonces te elijo siempre</div>
+
 </div>
 
-<h2>💖 20 cosas que amo de ti</h2>
+<h2>💖 Cosas que amo de ti</h2>
+
 <div class="love-list">
-1. Tu sonrisa<br>
-2. Tu mirada<br>
-3. Tu paciencia<br>
-4. Tus abrazos<br>
-5. Cómo me entiendes<br>
-6. Tu forma de amar<br>
-7. Tu voz<br>
-8. Tu dulzura<br>
-9. Tu fuerza<br>
-10. tu culito🍑<br>
-11. tus ojos 👀<br>
-12. tu risa<br>
-13. tu forma de caminar<br>
-14. tu cuerpo<br>
-15. tu pelo<br>
-16. tu humor<br>
-17. tu vestimenta<br>
-18. tu inteligencia <br>
-19. tus dientes<br>
-20. sobre todo eso, que seas tu❤️<br>
+
+Tu sonrisa<br>
+Tu mirada<br>
+Tu risa<br>
+Tus abrazos<br>
+Tu forma de amar<br>
+Tu dulzura<br>
+Tu inteligencia<br>
+Tu forma de caminar<br>
+Tu humor<br>
+Tu culito 🍑<br>
+
 </div>
 
-<div class="game">
 <h2>💘 Encuentra el corazón correcto</h2>
+
 <span class="heart-btn" onclick="wrong()">💛</span>
 <span class="heart-btn" onclick="correct()">❤️</span>
 <span class="heart-btn" onclick="wrong()">🩵</span>
 <span class="heart-btn" onclick="wrong()">🤍</span>
-</div>
 
-<div id="scrollMessage">
-Si volviera a nacer… te elegiría otra vez ❤️
+<div id="finalMessage">
+Si volviera a nacer… te volvería a elegir ❤️
 </div>
 
 <script>
 
-/* Intro */
-function startPage(){
-  document.getElementById("intro").style.display="none";
+/* intro */
+
+function start(){
+document.getElementById("intro").style.display="none";
 }
 
-/* Contador */
-let startDate = new Date("2025-03-14");
+/* contador */
+
+let startDate=new Date("2025-03-14");
+
 function updateCounter(){
+
 let now=new Date();
 let diff=now-startDate;
+
 let days=Math.floor(diff/(1000*60*60*24));
-let hours=Math.floor((diff/(1000*60*60))%24);
-let minutes=Math.floor((diff/(1000*60))%60);
-let seconds=Math.floor((diff/1000)%60);
+let hours=Math.floor(diff/(1000*60*60)%24);
+let minutes=Math.floor(diff/(1000*60)%60);
+let seconds=Math.floor(diff/1000%60);
+
 document.getElementById("counter").innerHTML=
 days+" días "+hours+" horas "+minutes+" minutos "+seconds+" segundos ❤️";
+
 }
+
 setInterval(updateCounter,1000);
 updateCounter();
 
-/* Slideshow */
+/* slideshow */
+
 let slideIndex=0;
 let slides=document.querySelectorAll(".slideshow img");
+
 function showSlides(){
+
 slides.forEach(s=>s.style.display="none");
+
 slideIndex++;
-if(slideIndex>slides.length){slideIndex=1}
+
+if(slideIndex>slides.length){slideIndex=1;}
+
 slides[slideIndex-1].style.display="block";
+
 setTimeout(showSlides,3000);
+
 }
+
 showSlides();
 
-/* Scroll mensaje */
-window.addEventListener("scroll",()=>{
-let scrollMsg=document.getElementById("scrollMessage");
-if(window.scrollY+window.innerHeight>=document.body.scrollHeight-50){
-scrollMsg.style.opacity=1;
-}
-});
+/* juego */
 
-/* Juego */
 function correct(){
 
-  const music = document.getElementById("bgmusic");
-  music.volume = 0;
-  music.play();
+document.getElementById("music").play();
 
-  let fade = setInterval(()=>{
-    if(music.volume < 0.5){
-      music.volume += 0.05;
-    } else {
-      clearInterval(fade);
-    }
-  },200);
+let overlay=document.createElement("div");
 
-  let overlay = document.createElement("div");
-  overlay.style.position="fixed";
-  overlay.style.top="0";
-  overlay.style.left="0";
-  overlay.style.width="100%";
-  overlay.style.height="100%";
-  overlay.style.background="black";
-  overlay.style.display="flex";
-  overlay.style.justifyContent="center";
-  overlay.style.alignItems="center";
-  overlay.style.flexDirection="column";
-  overlay.style.color="pink";
-  overlay.style.fontSize="28px";
-  overlay.style.zIndex="9999";
-  overlay.innerHTML="🌌 City of Stars… solo tú y yo ✨";
-
-  document.body.appendChild(overlay);
-
-  setTimeout(()=>{
-    overlay.innerHTML+="<br><br>Te elegiría en todas mis vidas ❤️";
-  },4000);
-}
-
-function wrong(){
-  alert("Intenta otra vez 😏");
-}
-
-/* Corazones flotando */
-setInterval(()=>{
-let heart=document.createElement("div");
-heart.className="heart";
-heart.style.left=Math.random()*100+"%";
-heart.innerHTML="❤️";
-document.body.appendChild(heart);
-setTimeout(()=>heart.remove(),6000);
-},800);
-
-</script>
-
-</body>
-</html>
+overlay.style.position="fixed";
+overlay.style.top="0";
+overlay.style.left="0";
+overlay.style.width="100%";
+overlay
