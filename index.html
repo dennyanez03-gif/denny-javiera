@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuestro Universo ❤️</title>
+
+<title>Javiera ❤️ Denni</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:black;
 color:white;
 text-align:center;
 overflow-x:hidden;
 }
 
-/* estrellas */
 .stars{
 position:fixed;
 width:100%;
@@ -25,29 +26,26 @@ background:url("https://www.transparenttextures.com/patterns/stardust.png");
 z-index:-1;
 }
 
-/* intro */
 #intro{
 position:fixed;
 width:100%;
 height:100%;
 background:black;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
 z-index:10;
 }
 
 button{
 padding:12px 25px;
 border:none;
-border-radius:30px;
+border-radius:20px;
 background:pink;
 font-weight:bold;
 cursor:pointer;
 }
-
-/* slideshow */
 
 .slideshow{
 max-width:420px;
@@ -60,8 +58,6 @@ border-radius:15px;
 display:none;
 }
 
-/* timeline */
-
 .timeline{
 max-width:500px;
 margin:auto;
@@ -69,12 +65,10 @@ text-align:left;
 }
 
 .timeline div{
-margin:15px 0;
-border-left:3px solid pink;
+border-left:2px solid pink;
+margin:20px;
 padding-left:10px;
 }
-
-/* lista */
 
 .love-list{
 max-width:500px;
@@ -82,15 +76,15 @@ margin:auto;
 text-align:left;
 }
 
-/* juego */
+.game{
+margin:40px;
+}
 
 .heart-btn{
 font-size:32px;
 cursor:pointer;
 margin:10px;
 }
-
-/* corazones */
 
 .heart{
 position:fixed;
@@ -103,24 +97,6 @@ animation:floatUp 6s linear infinite;
 100%{transform:translateY(-100vh);}
 }
 
-/* estrellas fugaces */
-
-.shooting-star{
-position:fixed;
-width:2px;
-height:100px;
-background:white;
-top:-100px;
-animation:shoot 3s linear;
-}
-
-@keyframes shoot{
-0%{transform:translateX(0) translateY(0);}
-100%{transform:translateX(500px) translateY(800px);}
-}
-
-/* mensaje final */
-
 #finalMessage{
 opacity:0;
 transition:2s;
@@ -130,11 +106,12 @@ margin:60px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<audio id="music" loop>
+<audio id="bgmusic" loop>
 <source src="cityofstars.mp3" type="audio/mpeg">
 </audio>
 
@@ -142,7 +119,7 @@ margin:60px;
 
 <div id="intro">
 <h1>Esta página es solo para el amor de mi vida ❤️</h1>
-<button onclick="start()">Entrar</button>
+<button onclick="startPage()">Entrar</button>
 </div>
 
 <h1>Javiera ❤️ Denni</h1>
@@ -150,7 +127,7 @@ margin:60px;
 <h2>⏳ Nuestro tiempo juntos</h2>
 <div id="counter"></div>
 
-<h2>📸 Nuestros recuerdos</h2>
+<h2>📸 Nuestros momentos</h2>
 
 <div class="slideshow">
 
@@ -160,6 +137,30 @@ margin:60px;
 <img src="motion_photo_4688936034215435824.jpg">
 <img src="IMG-20251130-WA0166(1).jpg">
 <img src="IMG-20251101-WA0080.jpg">
+<img src="IMG-20250901-WA0011.jpg">
+<img src="IMG-20250729-WA0038.jpg">
+<img src="IMG-20250721-WA0038.jpg">
+<img src="IMG-20250622-WA0276(1).jpg">
+<img src="IMG-20250524-WA0053.jpg">
+<img src="IMG-20250414-WA0034.jpg">
+<img src="IMG_20260220_100443.jpg">
+<img src="IMG-20250414-WA0003.jpg">
+<img src="IMG-20260118-WA0032.jpg">
+<img src="IMG-20251101-WA0014.jpg">
+<img src="IMG-20260102-WA0021.jpg">
+<img src="motion_photo_6044508062454653571.jpg">
+<img src="IMG-20260102-WA0025.jpg">
+<img src="IMG-20251130-WA0132.jpg">
+<img src="IMG-20251130-WA0138.jpg">
+<img src="IMG-20250622-WA0294(1).jpg">
+<img src="IMG-20250622-WA0307.jpg">
+<img src="IMG-20250402-WA0014(1).jpg">
+<img src="IMG-20250511-WA0001.jpg">
+<img src="IMG-20250414-WA0040.jpg">
+<img src="IMG-20250622-WA0195.jpg">
+<img src="IMG_20251207_150536.jpg">
+<img src="IMG_20250728_171904.jpg">
+<img src="IMG_20250622_102008.jpg">
 
 </div>
 
@@ -167,30 +168,42 @@ margin:60px;
 
 <div class="timeline">
 
-<div>✨ Nos conocimos en un McDonald's de Maipú</div>
+<div>🍔 Nos conocimos en un McDonald's de Maipú</div>
+<div>💬 Empezamos a hablar</div>
 <div>💋 Nuestro primer beso</div>
 <div>🌙 Nuestra primera salida</div>
 <div>❤️ El día que supe que eras tú</div>
-<div>🔒 Desde entonces te elijo siempre</div>
 
 </div>
 
-<h2>💖 Cosas que amo de ti</h2>
+<h2>💖 20 cosas que amo de ti</h2>
 
 <div class="love-list">
 
-Tu sonrisa<br>
-Tu mirada<br>
-Tu risa<br>
-Tus abrazos<br>
-Tu forma de amar<br>
-Tu dulzura<br>
-Tu inteligencia<br>
-Tu forma de caminar<br>
-Tu humor<br>
-Tu culito 🍑<br>
+1. Tu sonrisa<br>
+2. Tu mirada<br>
+3. Tu paciencia<br>
+4. Tus abrazos<br>
+5. Cómo me entiendes<br>
+6. Tu forma de amar<br>
+7. Tu voz<br>
+8. Tu dulzura<br>
+9. Tu fuerza<br>
+10. tu culito🍑<br>
+11. tus ojos 👀<br>
+12. tu risa<br>
+13. tu forma de caminar<br>
+14. tu cuerpo<br>
+15. tu pelo<br>
+16. tu humor<br>
+17. tu vestimenta<br>
+18. tu inteligencia<br>
+19. tus dientes<br>
+20. sobre todo que seas tú ❤️
 
 </div>
+
+<div class="game">
 
 <h2>💘 Encuentra el corazón correcto</h2>
 
@@ -199,19 +212,17 @@ Tu culito 🍑<br>
 <span class="heart-btn" onclick="wrong()">🩵</span>
 <span class="heart-btn" onclick="wrong()">🤍</span>
 
+</div>
+
 <div id="finalMessage">
-Si volviera a nacer… te volvería a elegir ❤️
+Si volviera a nacer… te elegiría otra vez ❤️
 </div>
 
 <script>
 
-/* intro */
-
-function start(){
+function startPage(){
 document.getElementById("intro").style.display="none";
 }
-
-/* contador */
 
 let startDate=new Date("2025-03-14");
 
@@ -221,9 +232,9 @@ let now=new Date();
 let diff=now-startDate;
 
 let days=Math.floor(diff/(1000*60*60*24));
-let hours=Math.floor(diff/(1000*60*60)%24);
-let minutes=Math.floor(diff/(1000*60)%60);
-let seconds=Math.floor(diff/1000%60);
+let hours=Math.floor((diff/(1000*60*60))%24);
+let minutes=Math.floor((diff/(1000*60))%60);
+let seconds=Math.floor((diff/1000)%60);
 
 document.getElementById("counter").innerHTML=
 days+" días "+hours+" horas "+minutes+" minutos "+seconds+" segundos ❤️";
@@ -233,20 +244,20 @@ days+" días "+hours+" horas "+minutes+" minutos "+seconds+" segundos ❤️";
 setInterval(updateCounter,1000);
 updateCounter();
 
-/* slideshow */
+window.onload=function(){
 
-let slideIndex=0;
 let slides=document.querySelectorAll(".slideshow img");
+let index=0;
 
 function showSlides(){
 
 slides.forEach(s=>s.style.display="none");
 
-slideIndex++;
+index++;
 
-if(slideIndex>slides.length){slideIndex=1;}
+if(index>slides.length){index=1}
 
-slides[slideIndex-1].style.display="block";
+slides[index-1].style.display="block";
 
 setTimeout(showSlides,3000);
 
@@ -254,16 +265,36 @@ setTimeout(showSlides,3000);
 
 showSlides();
 
-/* juego */
+};
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+heart.style.left=Math.random()*100+"%";
+heart.innerHTML="❤️";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),6000);
+
+},800);
 
 function correct(){
 
-document.getElementById("music").play();
+document.getElementById("bgmusic").play();
+document.getElementById("finalMessage").style.opacity=1;
 
-let overlay=document.createElement("div");
+}
 
-overlay.style.position="fixed";
-overlay.style.top="0";
-overlay.style.left="0";
-overlay.style.width="100%";
-overlay
+function wrong(){
+
+alert("Intenta otra vez 😏");
+
+}
+
+</script>
+
+</body>
+</html>
