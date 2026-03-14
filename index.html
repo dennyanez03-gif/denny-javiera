@@ -212,10 +212,14 @@ margin:60px;
 <span class="heart-btn" onclick="wrong()">🩵</span>
 <span class="heart-btn" onclick="wrong()">🤍</span>
 
+<p style="margin-top:20px;color:#ffccd5;">
+Elige el corazón correcto mi amor ❤️
+</p>
+
 </div>
 
-<div id="finalMessage">
-Si volviera a nacer… te elegiría otra vez ❤️
+<div id="finalMessage" style="opacity:0;transition:2s;font-size:24px;color:pink;margin:60px;">
+quisiera volver a ese primer dia que te vi, para revivir lo que fue ❤️ te amo
 </div>
 
 <script>
@@ -283,8 +287,13 @@ setTimeout(()=>heart.remove(),6000);
 
 function correct(){
 
-document.getElementById("bgmusic").play();
 document.getElementById("finalMessage").style.opacity=1;
+
+}
+
+function wrong(){
+
+alert("Intenta otra vez mi amor ❤️");
 
 }
 
